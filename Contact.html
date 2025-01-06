@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("perezs01@msu.edu"); // Replace with your actual EmailJS user ID
+        })();
+    </script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+        <nav class="navbar">
+            <a href="index2.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="contact-header">
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me through this form or via the provided contact methods below.</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <div class="boxes">
+                    <h2>Email</h2>
+                    <p><a href="mailto:perezs01@msu.edu">perezs01@msu.edu</a></p>
+                </div>
+                
+                <div class="boxes">
+                    <h2>LinkedIn</h2>
+                    <p><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+
+            const serviceID = "service_03s3hm5";
+            const templateID = "template_oswtiu7";
+            const publickey = "Q2W4hV1m9OKJW5d1N";
+
+            emailjs
+                .sendForm(serviceID, templateID, this, publickey)
+                .then(
+                    () => {
+                        alert("Message sent successfully!");
+                    },
+                    (error) => {
+                        alert("Failed to send the message. Please try again.");
+                        console.error(error);
+                    }
+                );
+        });
+    </script>
+</body>
+</html>
