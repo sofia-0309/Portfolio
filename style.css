@@ -155,7 +155,47 @@ body{
         width: 100%;  
     }
 }
+.about-container{
+    max-width: 600px;
+    margin-left:30%;
+    margin-top: 10%;
+    display: grid;
+    
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-content: center;
+}
+.about-container h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.skills-container{
+    max-width: 600px;
+    margin-left:30%;
+    margin-top: 2%;
+    display: grid;
+    
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-content: center;
+}
 
+.skills-container h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
 .about{
 
     display: flex;
@@ -180,94 +220,70 @@ body{
     width : 400px;
     height: 18px;
 }
-.box {
-    position: relative;
+.skills-container {
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skills-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.skill {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 18px;
-    background: white;
-    border-radius: 8px;
-    font-size: 15px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 2px;
-    z-index: 1;
-    overflow: hidden; 
     justify-content: space-between;
-}
-.about-content .box:nth-child(1) {
-    width: 400px; 
+    margin-bottom: 10px;
 }
 
-.about-content .box:nth-child(2) {
-    width: 350px; 
+.skill span {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: bold;
 }
 
-.about-content .box:nth-child(3) {
-    width: 275px; 
+.progress-bar {
+    flex-grow: 1;
+    height: 8px;
+    margin-left: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.about-content .box:nth-child(4) {
-    width: 275px; 
-}
-
-.box:nth-child(1)::before {
-    background: rgb(236, 138, 138);  
-    content: '';
-    position: absolute;
-    width:0;
-    top:0;
-    left:0;
+.progress-bar div {
     height: 100%;
-    animation: fillBox 1s ease forwards; 
-    z-index: -1;
-    transition: .8s;
+    background: rgb(242, 157, 30);
+    transition: width 0.5s ease;
 }
 
-.box:nth-child(2)::before {
-    background: rgb(241, 223, 129);  
-    content: '';
-    position: absolute;
-    width:0;
-    top:0;
-    left:0;
-    height: 100%;
-    animation: fillBox 1s ease forwards; 
-    z-index: -1;
-    transition: .8s;
-}
-
-.box:nth-child(3)::before {
-    background: rgb(182, 154, 242);  
-    content: '';
-    position: absolute;
-    width:0;
-    top:0;
-    left:0;
-    height: 100%;
-    animation: fillBox 1s ease forwards; 
-    z-index: -1;
-    transition: .8s;
-}
-
-.box:nth-child(4)::before {
-    background: rgb(150, 210, 155);  /* Orange */
-    content: '';
-    position: absolute;
-    width:0;
-    top:0;
-    left:0;
-    height: 100%;
-    animation: fillBox 1s ease forwards; 
-    z-index: -1;
-    transition: .8s;
-}
- 
-.box h1,h2,h3{
-    font-size: 15px;
-}
 .about p{
     align-self: center;
     margin-left: 150px;
@@ -275,7 +291,30 @@ body{
     font-weight: bold;
 }
 
+.footer {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem 0;
+}
 
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.footer .social-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: var(--primary-color);
+}
 
 .framework{
     
