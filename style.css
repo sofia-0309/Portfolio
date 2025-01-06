@@ -504,6 +504,7 @@ body{
     height: 100vh; /* Full viewport height */
     position: relative; /* Allows positioning of overlay */
     margin-top: 5%;
+     display: grid;
 }
 
 /* Fullscreen Image */
